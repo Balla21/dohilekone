@@ -24,4 +24,4 @@ app.use((req, res) => {
     return res.status(404).send("Error")
 });
 
-//app.listen(PORT, () => console.log(`server running at localhost:${PORT}`))
+app.listen(PORT, () => console.log(`server running at localhost:${PORT}`))
