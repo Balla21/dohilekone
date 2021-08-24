@@ -1,0 +1,89 @@
+<!-- About me -->
+<div class="row">
+    <h1 class="text-center mt-4 mx-auto"><u>About</u> </h1>
+    <section class="jumbotron text-center">
+        <div class="container">
+          <p class="lead text-justify text-muted">
+             My name is Dohile Kone. A passionate software developer with a versatile background
+             in Software Engineering including <i>Programming, Database, etc...</i> who loves building data-driven applications.
+             I am currently earning a college degree in Computer Science at the University of Central Oklahoma.
+          </p>
+          <p>
+            <a href="/documents/DohileKone_Resume.pdf" class="btn btn-danger my-2" target="_black"> Download CV </a>
+            <a href="#portfolio" class="btn btn-secondary my-2">Portfolio</a>
+            <a href="http://www.github.com/Balla21" class="btn btn-info my-2" target="_blank" > Github</a>
+            <a href="https://www.linkedin.com/in/dohile-balla-kone-1640a4ab" class="btn btn-primary my-2" target="_blank"class="btn btn-info my-2">Linkedin</a>
+
+          </p>
+        </div>
+      </section>
+</div>
+<!-- About me -->
+
+<hr>
+<!-- Skills --> 
+    <h2 class="text-center"> Technical Skills </h2> 
+    <div class="row my-5 text-center">
+        <% for (const language of languages) { %>
+            <div class="col-sm-2">
+                <i class=" <%= language.description %>  "></i>
+                 <h5> <%= language.name %> </h5>
+             </div>
+        <% } %>
+        
+    </div>
+<!-- Skills -->
+<br>
+<hr>
+<!-- Education -->
+    <h2 class="text-center mt-3"> Education </h2> 
+     <div class="row my-4">
+            <% for (const school of schools) { %>
+                <div class="col-md-6">
+                    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                      <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary"> <%= school.degree %> </strong>
+                        <h3 class="mb-0"> <%= school.collegeName %>   </h3>
+                        <div class="mb-1 text-muted"><%= school.attendanceTime %></div>
+                        <a href=" <%= school.schoolURL %> " class="btn btn-success stretched-link my-2"
+                            target="_blank">
+                                Visit college
+                        </a>
+                      </div>
+                      <div class="col-auto d-none d-lg-block">
+                        <img src="<%= school.schoolLogo %>" class="img-thumbnail img-fluid">
+                    </div>
+                </div>
+             <% } %>
+        </div> 
+    </div>
+
+<!-- Education  -->
+<br>
+<hr>
+
+<!-- Portfolio -->
+<h2 id="portfolio" class="text-center mt-3"> Portfolio </h2> 
+<div class="row my-4 mx-auto text-center">
+     <% for(const project of projects) { %>
+
+        <div class="card col-md-3 mx-2 mt-2" style="width: 18rem;">
+            <img src="<%= project.screenshot %>" class="card-img-top img-thumbnail img-fluid" alt="website image goes here">
+            <div class="card-body">
+              <h5 class="card-title"> <%= project.name %> </h5>
+              <p class="card-text"> <strong> Tech Stack :</strong>  <%= project.techStacks.join("/ ") %> </p>
+                <a href=" <%=  project.githubURL %> " target="_blank"> <i class="fab fa-github fa-2x"> </i> </a>
+
+                <% if (project.completed) { %>
+                  <a href=" <%=  project.URL %> " target="_blank"> <i class="fas fa-globe fa-2x"> </i> </a>
+                <% } else { %>
+                    <p class="mt-3"> Project currently in progress, view on github  </p>
+                <% } %>
+
+              </div>
+          </div>
+     <% } %>
+ </div> 
+
+<!--Portfolio-->
+
