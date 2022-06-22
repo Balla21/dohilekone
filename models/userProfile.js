@@ -21,17 +21,17 @@ exports.projects = [
     {
         screenshot : "/image/gestasso.png",
         name : "Gestasso",
-        URL : "",
+        URL : "https://associationmanagmentsystem.azurewebsites.net ",
         githubURL : "https://github.com/Balla21/Gestasso.git",
-        techStacks : ["ASP.NET CORE MVC","Bootstrap", "Entity Framework Core", "Microsft Azure"],
-        completed : false
+        techStacks : ["PHP","Bootstrap", "JavaScript", "Microsft Azure"],
+        completed : true
     },
     {
         screenshot : "/image/dohilek-website.png",
         name : "Online Portfolio",
-        URL : "https://dohilekone.azurewebsites.net",
-        githubURL : "https://github.com/Balla21/dohilek-website.git",
-        techStacks : ["Node.Js","Bootstrap", "Microsoft Azure"],
+        URL : "https://dohilekone.herokuapp.com",
+        githubURL : "https://github.com/Balla21/dohileportfolio.git",
+        techStacks : ["Node.Js","Bootstrap", "Heroku"],
         completed : true
     },
     {
@@ -46,7 +46,7 @@ exports.projects = [
     {
         screenshot : "/image/uco-nsls.png",
         name : "UCO NSLS",
-        URL : "http://uconsls.epizy.com/",
+        URL : "https://github.com/Balla21/uco_nsls",
         githubURL : "https://github.com/Balla21/uco_nsls",
         techStacks : ["PHP", "MySQL", "Javascript", "Bootstrap"],
         completed : true

@@ -6,7 +6,7 @@ const homeController = require("./controllers/homeController.js");
 
 const PORT =  process.env.PORT || 5000;
 
-//beginning of the app
+//beginning of the portfolio appg
 const app = express();
  
 app.use(express.static(path.resolve(__dirname, "public")));
